@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pageController.Home">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+      <ImageView nodeOrientation="INHERIT" opacity="0.85" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../images/signup/background.jpg" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="680.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+              <children>
+                  <AnchorPane layoutX="296.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="380.0" style="-fx-background-color: white; -fx-background-radius: 10;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                  <GridPane layoutX="48.0" layoutY="233.0" prefHeight="135.0" prefWidth="285.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="285.0" prefWidth="285.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#goToWallet" prefHeight="45.0" prefWidth="285.0" style="-fx-background-radius: 90;" text="Wallet" textFill="#0a0202">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font></Button>
+                        <Button mnemonicParsing="false" onAction="#goToTransfers" prefHeight="45.0" prefWidth="285.0" style="-fx-background-radius: 90;" text="Transfers" GridPane.rowIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font></Button>
+                     </children>
+                  </GridPane>
+                  <Hyperlink layoutX="166.0" layoutY="393.0" onAction="#logout" text="Log out" AnchorPane.bottomAnchor="45.0">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font></Hyperlink>
+                  <Button fx:id="profileButton" layoutX="119.0" layoutY="57.0" mnemonicParsing="false" onAction="#goToProfile" onMouseEntered="#goToProfileOnMouseEntered" onMouseExited="#goToProfileOnMouseExited" prefHeight="80.0" prefWidth="80.0" style="-fx-background-radius: 90;" translateY="-10.0" AnchorPane.bottomAnchor="303.0" AnchorPane.leftAnchor="149.0" AnchorPane.rightAnchor="149.0" AnchorPane.topAnchor="75.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="125.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/home/avatar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect></Button>
+                      </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="-8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="300.0" style="-fx-background-color: #7fffd4; -fx-background-radius: 10;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                          <ImageView fitHeight="316.0" fitWidth="280.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                  <Image url="@../../images/signup/hand_money.png" />
+                              </image>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect>
+                          </ImageView>
+                  <Region prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: #7fffd4;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Region layoutX="10.0" layoutY="10.0" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: #7fffd4;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                      </children>
+                  </AnchorPane>
+            <GridPane layoutX="341.0" layoutY="160.0" prefHeight="60.0" prefWidth="300.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="welcomeText" alignment="CENTER" prefHeight="30.0" prefWidth="327.0" text="Welcome, User" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="accountTypeInfo" alignment="CENTER" prefHeight="30.0" prefWidth="301.0" text="You are using a Type Account" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <ImageView fitHeight="97.0" fitWidth="225.0" layoutX="24.0" layoutY="58.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="415.0" AnchorPane.topAnchor="65.0">
+               <image>
+                  <Image url="@../../images/icon/brand.png" />
+               </image>
+            </ImageView>
+              </children>
+              <effect>
+                  <DropShadow height="42.0" radius="20.5" width="42.0" />
+              </effect>
+          </AnchorPane>
+    </children>
+</GridPane>
